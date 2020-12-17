@@ -1,4 +1,4 @@
-version = 3.0
+version = 3.1
 
 import discord
 import termcolor
@@ -47,6 +47,7 @@ async def on_connect():
     print(f"{Fore.BLUE}                      Prefix | {prefix}")
     print(f"{Fore.BLUE}{prefix}ban - Bans all server members.")
     print(f"{Fore.BLUE}{prefix}kick - Kicks all server members.")
+    print(f"{Fore.BLUE}{prefix}rename [name] - Renames all server members to [name].")
     print(f"{Fore.BLUE}{prefix}role create - Creates 50 roles.")
     print(f"{Fore.BLUE}{prefix}role delete - Deletes all server roles.")
     print(f"{Fore.BLUE}{prefix}channel create - Creates 50 channels.")
@@ -69,8 +70,7 @@ async def on_connect():
                 await member.ban()
                 print("Banned " + str(member))
             except:
-                print("Unable to ban " + str(member) +
-                      ", you likely don't have permission.")
+                print("Unable to ban " + str(member) + ", you likely don't have permission.")
                 pass
 
     #Mass kick
@@ -85,8 +85,7 @@ async def on_connect():
                 await member.kick()
                 print("Kicked " + str(member))
             except:
-                print("Unable to kick " + str(member) +
-                      ", you likely don't have permission.")
+                print("Unable to kick " + str(member) + ", you likely don't have permission.")
                 pass
 
     #Role deletion/Mass role creation
@@ -102,9 +101,7 @@ async def on_connect():
                     await ctx.guild.create_role(
                         name=f"I have killed {i} faggots")
                 except:
-                    print(
-                        "Unable to make new channels, you likely don't have permission."
-                    )
+                    print("Unable to make new channels, you likely don't have permission.")
         elif choice == "delete":
             await ctx.message.delete()
             print(f"{Fore.BLUE}Removing roles...")
@@ -116,8 +113,7 @@ async def on_connect():
                     await role.delete()
                     print("Deleted " + str(role) + ".")
                 except:
-                    print("Unable to delete " + str(role) +
-                          ", you likely don't have permission.")
+                    print("Unable to delete " + str(role) + ", you likely don't have permission.")
                     pass
         else:
             await print("Not a valid option.")
@@ -131,9 +127,7 @@ async def on_connect():
                 await user.edit(nick=rename_to)
                 print(f"{user.name} has been renamed to {rename_to}.")
             except:
-                print(
-                    f"{user.name} has not been renamed to {rename_to}, you likely don't have permission."
-                )
+                print(f"{user.name} has not been renamed to {rename_to}, you likely don't have permission.")
 
     #Channel deletion/Mass creation
     @bot.command()
@@ -145,15 +139,13 @@ async def on_connect():
             try:
                 for i in range(1, 50):
                     await ctx.guild.create_text_channel(
-                        name=f"I have killed {i} faggots")
+                        name=f"{i} faggots burned")
                     await ctx.guild.create_voice_channel(
-                        name=f"I have gassed {i} kikes")
+                        name=f"{i} kikes gassed")
                     await ctx.guild.create_category(
-                        name=f"I have shot {i} niggers")
+                        name=f"{i} niggers hung")
             except:
-                print(
-                    "Unable to create channels, you likely don't have permission."
-                )
+                print("Unable to create channels, you likely don't have permission.")
         elif choice == "delete":
             await ctx.message.delete()
             print(f"{Fore.BLUE}Deleting channels...")
@@ -172,7 +164,7 @@ async def on_connect():
             print(f"{Fore.RED}Not a valid option.")
 
     #End
-    @bot.command(aliases=["shutdown", "off", "stop"], )
+    @bot.command(aliases=["shutdown", "off", "stop"])
     async def end(ctx):
         await ctx.message.delete()
         os.system("clear -x")  #change to "cls" if you're using windows
@@ -193,8 +185,7 @@ async def on_connect():
                 await member.ban()
                 print("Banned " + str(member) + ".")
         except:
-            print("Unable to ban " + str(member) +
-                  ", you likely don't have permission.")
+            print("Unable to ban " + str(member) + ", you likely don't have permission.")
             pass
             #Deletes roles
         print("Banning finished.")
@@ -225,14 +216,13 @@ async def on_connect():
                 print("Deleted " + str(channel) + ".")
             except:
                 pass
-                print("Unable to delete " + str(channel) +
-                      ", you likely don't have permission.")
+                print("Unable to delete " + str(channel) +", you likely don't have permission.")
         print(f"{Fore.GREEN}Channel deletion has finished.")
         print("")
 
-        #Creates channels (You can change the "Fuck you nigger/faggot/whatever" part to what you want, but make sure to keep the {i} thing at the end so it doesn"t try to make channels with the same name)
+        #Creates channels
 
-        for i in range(1, 50):
+        for i in range(50):
             try:
                 await ctx.guild.create_role(name=f"FUCK YOU NIGGER")
                 await ctx.guild.create_text_channel(
@@ -241,9 +231,7 @@ async def on_connect():
                     name=f"GET FUCKED BITCH")
                 await ctx.guild.create_category(name=f"GET FUCKED KIKE")
             except:
-                print(
-                    "Unable to create roles, you likely don't have permission."
-                )
+                print("Unable to create roles, you likely don't have permission.")
         print("Mass channel creation has finished.")
 
         try:
@@ -273,12 +261,11 @@ async def on_connect():
         await ctx.message.delete()
         print(f"{Fore.BLUE}{prefix}ban - Bans all server members.")
         print(f"{Fore.BLUE}{prefix}kick - Kicks all server members.")
+        print(f"{Fore.BLUE}{prefix}rename [name] - Renames all server members to [name].")
         print(f"{Fore.BLUE}{prefix}role create - Creates 50 roles.")
         print(f"{Fore.BLUE}{prefix}role delete - Deletes all server roles.")
         print(f"{Fore.BLUE}{prefix}channel create - Creates 50 channels.")
-        print(
-            f"{Fore.BLUE}{prefix}channel delete - Deletes all server channels."
-        )
+        print(f"{Fore.BLUE}{prefix}channel delete - Deletes all server channels.")
         print(f"{Fore.BLUE}{prefix}GLORY_TO_ARKANSAS/nuke - Nukes the server.")
         print(f"{Fore.BLUE}{prefix}shutdown/off/stop/end - Exits.")
         print("")
