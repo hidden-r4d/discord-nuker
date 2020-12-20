@@ -1,8 +1,10 @@
 # discord-nuker
 
-Simple **bot** for removing all channels/roles, banning all members, and generally causing havoc.
+ Simple **bot** for removing all channels/roles, banning all members, and generally causing havoc.
 
 
+
+## Commands
 
 
 {prefix}ban - Bans all server members.
@@ -14,9 +16,11 @@ Simple **bot** for removing all channels/roles, banning all members, and general
 {prefix}GLORY_TO_ARKANSAS/nuke - Nukes the server.
 
 
-Nuke command:
+## Nuke command:
 
 (In order of when they take place)
+
+Kicks members,
 
 Deletes roles,
 
