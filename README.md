@@ -8,12 +8,19 @@
 
 
 {prefix}ban - Bans all server members.
+
 {prefix}kick - Kicks all server members.
+
 {prefix}role create - Creates 50 roles.
+
 {prefix}role delete - Deletes all server roles.
+
 {prefix}channel create - Creates 50 channels.
+
 {prefix}channel delete - Deletes all server channels.
+
 {prefix}GLORY_TO_ARKANSAS/nuke - Nukes the server.
+
 
 
 ## Nuke command:
