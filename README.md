@@ -27,7 +27,7 @@
 
 (In order of when they take place)
 
-Kicks members,
+Bans members,
 
 Deletes roles,
 
